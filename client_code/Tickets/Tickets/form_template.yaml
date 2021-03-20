@@ -11,9 +11,9 @@ components:
   components:
   - type: Label
     properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Tickets, font_size: null, font: '', spacing_above: small,
+      visible: true, text: '  Tickets', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_1
-    layout_properties: {grid_position: 'DWBHSJ,XMBXYX', full_width_row: false}
+    layout_properties: {grid_position: 'DWBHSJ,XMBXYX', full_width_row: true}
 is_package: true

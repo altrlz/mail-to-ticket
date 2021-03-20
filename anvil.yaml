@@ -4,7 +4,7 @@ allow_embedding: false
 name: Mail to Ticket
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
 metadata: {}
-startup_form: Form1
+startup_form: Main
 native_deps: {head_html: ''}
 db_schema: []
 renamed: true

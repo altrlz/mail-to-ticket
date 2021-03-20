@@ -1,8 +1,10 @@
-allow_embedding: false
-package_name: Mail_to_Ticket
-db_schema: []
-name: Mail to Ticket
-startup_form: Form1
-renamed: true
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
 services: []
+package_name: Mail_to_Ticket
+allow_embedding: false
+name: Mail to Ticket
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
+metadata: {}
+startup_form: Form1
+native_deps: {head_html: ''}
+db_schema: []
+renamed: true

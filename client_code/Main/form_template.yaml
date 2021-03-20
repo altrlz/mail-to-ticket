@@ -35,7 +35,7 @@ components:
     name: link_dashboard
     layout_properties: {grid_position: 'GJQEYH,CPLRUS'}
     data_bindings: []
-    event_bindings: {click: nav_link_click}
+    event_bindings: {click: link_dashboard_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Tickets, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
@@ -43,7 +43,7 @@ components:
       italic: false, background: '', bold: false, underline: false, icon: 'fa:ticket'}
     name: link_tickets
     layout_properties: {grid_position: 'FYUBFM,BJTTCF'}
-    event_bindings: {click: nav_link_click}
+    event_bindings: {click: link_tickets_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Config, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
@@ -51,7 +51,7 @@ components:
       italic: false, background: '', bold: false, underline: false, icon: 'fa:cogs'}
     name: link_config
     layout_properties: {grid_position: 'YFFEZU,FTWFHL'}
-    event_bindings: {click: nav_link_click}
+    event_bindings: {click: link_config_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Mail to Ticket, font_size: null, font: '', spacing_above: small, icon_align: left,

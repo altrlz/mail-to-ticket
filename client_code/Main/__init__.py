@@ -9,17 +9,44 @@ class Main(MainTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
-    self.link_dashboard.tag.form_to_open = Dashboard()
-    self.link_tickets.tag.form_to_open = Tickets()
-    self.link_config.tag.form_to_open = Config()
 
     # Any code you write here will run when the form opens.
     
-  def nav_link_click(self, **event_args):
+  def reset_links(self, **event_args):
+    self.link_dashboard.role = ''
+    self.link_tickets.role = ''
+    self.link_config.role = ''
+
+  def link_dashboard_click(self, **event_args):
     """This method is called when the link is clicked"""
-    form_to_open = event_args['sender'].tag.form_to_open
+    self.reset_links()
+    self.link_dashboard.role = 'selected'
     
-    self.content_panel.clear()
-    self.content_panel.add_component(form_to_open)
+    new_panel = Dashboard()
+    
+    get_open_form().content_panel.clear()
+    get_open_form().content_panel.add_component(new_panel)
+
+  def link_tickets_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.reset_links()
+    self.link_tickets.role = 'selected'
+    
+    new_panel = Tickets()
+    
+    get_open_form().content_panel.clear()
+    get_open_form().content_panel.add_component(new_panel)
+
+  def link_config_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.reset_links()
+    self.link_config.role = 'selected'
+    
+    new_panel = Config()
+    
+    get_open_form().content_panel.clear()
+    get_open_form().content_panel.add_component(new_panel)
+
+
+
 

@@ -1,4 +1,5 @@
 from datetime import datetime
+from pytz import timezone
 
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -21,7 +22,7 @@ import anvil.server
 @anvil.server.callable
 def add_ticket(ticket_dict):  
   app_tables.tickets.add_row(
-    created=datetime.now(),
+    created=datetime.now(timezone('Asia/Tokyo')),
     **ticket_dict
   )
 

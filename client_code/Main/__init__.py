@@ -9,6 +9,7 @@ import plotly.graph_objects as go
 from ..Dashboard.Dashboard import Dashboard
 from ..Tickets.Tickets import Tickets
 from ..Config.Config import Config
+from ..Timerecode.Timerecode import Timerecode
 
 class Main(MainTemplate):
   def __init__(self, **properties):
@@ -21,43 +22,27 @@ class Main(MainTemplate):
     self.link_dashboard.role = ''
     self.link_tickets.role = ''
     self.link_config.role = ''
+    self.link_timerecode.role = ''
+    
+  def link_click(self, link, new_panel):
+    self.reset_links()
+    link.role = 'selected'
+
+    get_open_form().content_panel.clear()
+    get_open_form().content_panel.add_component(new_panel,full_width_row=True)
 
   def link_dashboard_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    self.reset_links()
-    self.link_dashboard.role = 'selected'
-    
-    new_panel = Dashboard()
-    
-    get_open_form().content_panel.clear()
-    get_open_form().content_panel.add_component(new_panel,full_width_row=True)
+    self.link_click(self.link_dashboard, Dashboard())
 
   def link_tickets_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    self.reset_links()
-    self.link_tickets.role = 'selected'
-    
-    new_panel = Tickets()
-    
-    get_open_form().content_panel.clear()
-    get_open_form().content_panel.add_component(new_panel,full_width_row=True)
+    self.link_click(self.link_tickets, Tickets())
 
+  def link_timerecode_click(self, **event_args):
+    self.link_click(self.link_timerecode, Timerecode())
+    
   def link_config_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    self.reset_links()
-    self.link_config.role = 'selected'
-    
-    new_panel = Config()
-    
-    get_open_form().content_panel.clear()
-    get_open_form().content_panel.add_component(new_panel,full_width_row=True)
+    self.link_click(self.link_config, Config())    
 
   def content_panel_show(self, **event_args):
-    """This method is called when the column panel is shown on the screen"""
     self.link_dashboard_click(**event_args)
-
-
-
-
-
 

@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from ._anvil_designer import TicketsTemplate
 from anvil import *
@@ -19,7 +19,6 @@ class Tickets(TicketsTemplate):
     self.repeating_panel_1.items = anvil.server.call('get_tickets')
     
   def add_ticket_click(self, **event_args):
-    """This method is called when the button is clicked"""
     ticket_dict = {
       "subject":"test",
       "sendername":"testuser",

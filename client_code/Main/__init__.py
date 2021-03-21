@@ -1,5 +1,6 @@
 from ._anvil_designer import MainTemplate
 from anvil import *
+import plotly.graph_objects as go
 
 from ..Dashboard.Dashboard import Dashboard
 from ..Tickets.Tickets import Tickets

@@ -17,6 +17,13 @@ import anvil.server
 #
 
 @anvil.server.callable
-def
+def add_ticket(subject, sendername, senderEmailAddress, receivedtime, body):
+  app_tables.tickets.add_row(
+    subject=subject,
+    sendername=sendername,
+    senderEmailAddress=senderEmailAddress,
+    receivedtime=receivedtime,
+    body=body
+  )
 
 

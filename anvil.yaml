@@ -11,31 +11,33 @@ startup_form: Main
 native_deps: {head_html: ''}
 db_schema:
 - name: Tickets
-  id: 113001
+  id: 113004
   python_name: tickets
-  columns: {}
-  access: {python_name: tickets, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
-    table_mapping_name: null, table_mapping_id: null, table_id: 113001}
-- name: delete
-  id: 113000
-  python_name: delete
   columns:
-    8+cVzE5zzK0=:
-      name: title
-      type: string
-      admin_ui: {order: 0, width: 200}
-    Nz17ATHYAO0=:
-      name: from_user
+    KBsiDLVdI8g=:
+      name: sendername
       type: string
       admin_ui: {order: 1, width: 200}
-    go+Wa9n1Ev8=:
-      name: ''
-      type: string
+    KCMAdMJKH1E=:
+      name: receivedtime
+      type: datetime
       admin_ui: {order: 3, width: 200}
-    qbg8ETPsPlU=:
-      name: to_users
-      type: simpleObject
+    bY79M4McmRQ=:
+      name: body
+      type: string
+      admin_ui: {order: 4, width: 200}
+    dGABRK3Br44=:
+      name: senderEmailAddress
+      type: string
       admin_ui: {order: 2, width: 200}
-  access: {python_name: delete, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
-    table_mapping_name: null, table_mapping_id: null, table_id: 113000}
+    xk0Z3gyywuI=:
+      name: subject
+      type: string
+      admin_ui: {order: 0, width: 200}
+    xkQQ91RtNeE=:
+      name: created
+      type: datetime
+      admin_ui: {order: 5, width: 200}
+  access: {python_name: tickets, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 113004}
 renamed: true

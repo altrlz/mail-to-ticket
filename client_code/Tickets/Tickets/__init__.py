@@ -27,6 +27,7 @@ class Tickets(TicketsTemplate):
       "body":"test comment"
     }
     
+    
     anvil.server.call('add_ticket', ticket_dict)
     self.refresh_tickets()
     

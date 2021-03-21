@@ -17,12 +17,12 @@ components:
     name: label_1
     layout_properties: {grid_position: 'DWBHSJ,XMBXYX', full_width_row: true}
   - type: Button
-    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+    properties: {role: secondary-color, align: right, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: add ticket, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      spacing_above: small, icon_align: left, spacing_below: large, italic: false,
       background: '', bold: false, underline: false, icon: 'fa:plus-circle'}
     name: add_ticket
-    layout_properties: {grid_position: 'IQNJLU,IXGSJN', full_width_row: true}
+    layout_properties: {grid_position: 'IQNJLU,DVJWPY', full_width_row: true}
     event_bindings: {click: add_ticket_click}
   - type: DataGrid
     properties:

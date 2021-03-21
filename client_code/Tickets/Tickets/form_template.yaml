@@ -17,7 +17,7 @@ components:
     name: label_1
     layout_properties: {grid_position: 'DWBHSJ,XMBXYX', full_width_row: true}
   - type: Button
-    properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: add ticket, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: 'fa:plus-circle'}

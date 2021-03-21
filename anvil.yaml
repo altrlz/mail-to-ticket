@@ -1,4 +1,7 @@
-services: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {auto_create_missing_columns: false}
 package_name: Mail_to_Ticket
 allow_embedding: false
 name: Mail to Ticket
@@ -6,5 +9,33 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
 metadata: {}
 startup_form: Main
 native_deps: {head_html: ''}
-db_schema: []
+db_schema:
+- name: Tickets
+  id: 113001
+  python_name: tickets
+  columns: {}
+  access: {python_name: tickets, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 113001}
+- name: delete
+  id: 113000
+  python_name: delete
+  columns:
+    8+cVzE5zzK0=:
+      name: title
+      type: string
+      admin_ui: {order: 0, width: 200}
+    Nz17ATHYAO0=:
+      name: from_user
+      type: string
+      admin_ui: {order: 1, width: 200}
+    go+Wa9n1Ev8=:
+      name: ''
+      type: string
+      admin_ui: {order: 3, width: 200}
+    qbg8ETPsPlU=:
+      name: to_users
+      type: simpleObject
+      admin_ui: {order: 2, width: 200}
+  access: {python_name: delete, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 113000}
 renamed: true

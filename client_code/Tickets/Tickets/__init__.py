@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from ._anvil_designer import TicketsTemplate
 from anvil import *
 import anvil.server
@@ -11,8 +13,25 @@ class Tickets(TicketsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    self.repeating_panel_1.items = anvil.server.call('get_tickets')
 
-  def button_1_click(self, **event_args):
+  def refresh_tickets(self):
+    self.repeating_panel_1.items = anvil.server.call('get_tickets')
+    
+  def add_ticket_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    ticket_dict = {
+      "subject":"test",
+      "sendername":"testuser",
+      "senderEmailAddress":"testuser@example.com",
+      "receivedtime": datetime.now(),
+      "body":"test comment"
+    }
+    
+    anvil.server.call('add_ticket', ticket_dict)
+    self.refresh_tickets()
+    
+
+
+
 

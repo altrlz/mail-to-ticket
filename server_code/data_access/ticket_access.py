@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -17,13 +19,13 @@ import anvil.server
 #
 
 @anvil.server.callable
-def add_ticket(subject, sendername, senderEmailAddress, receivedtime, body):
+def add_ticket(ticket_dict):  
   app_tables.tickets.add_row(
-    subject=subject,
-    sendername=sendername,
-    senderEmailAddress=senderEmailAddress,
-    receivedtime=receivedtime,
-    body=body
+    created=datetime.now(),
+    **ticket_dict
   )
 
+@anvil.server.callable
+def get_tickets():
+  return app_tables.tickets.search()
 

@@ -1,0 +1,54 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_1
+  layout_properties: {grid_position: 'GRKUBW,GSVRDA', full_width_row: true}
+  components:
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '  Tickets', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'DWBHSJ,XMBXYX', full_width_row: true}
+  - type: Button
+    properties: {role: secondary-color, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: add ticket, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: large, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:plus-circle'}
+    name: add_ticket
+    layout_properties: {grid_position: 'IQNJLU,DVJWPY', full_width_row: true}
+    event_bindings: {click: add_ticket_click}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: OBEMWU, title: Subject, data_key: subject}
+      - {id: ZLHCLU, title: Sendername, data_key: sendername}
+      - {id: YHKLOU, title: SenderEmailAddress, data_key: senderEmailAddress}
+      - {id: ERIKAJ, title: Receivedtime, data_key: receivedtime}
+      - {id: YCIXLQ, title: Body, data_key: body}
+      - {id: DPBHDG, title: Created, data_key: created}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: ticket_list
+    layout_properties: {grid_position: 'SPBTWZ,MBPCVA', full_width_row: true}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Tickets.Tickets.RowTemplate1}
+      name: repeating_panel_1
+      layout_properties: {}
+is_package: true

@@ -1,0 +1,43 @@
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {auto_create_missing_columns: false}
+package_name: Mail_to_Ticket
+allow_embedding: false
+name: Mail to Ticket
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
+metadata: {}
+startup_form: Main
+native_deps: {head_html: ''}
+db_schema:
+- name: Tickets
+  id: 113004
+  python_name: tickets
+  columns:
+    KBsiDLVdI8g=:
+      name: sendername
+      type: string
+      admin_ui: {order: 1, width: 200}
+    KCMAdMJKH1E=:
+      name: receivedtime
+      type: datetime
+      admin_ui: {order: 3, width: 200}
+    bY79M4McmRQ=:
+      name: body
+      type: string
+      admin_ui: {order: 4, width: 200}
+    dGABRK3Br44=:
+      name: senderEmailAddress
+      type: string
+      admin_ui: {order: 2, width: 200}
+    xk0Z3gyywuI=:
+      name: subject
+      type: string
+      admin_ui: {order: 0, width: 200}
+    xkQQ91RtNeE=:
+      name: created
+      type: datetime
+      admin_ui: {order: 5, width: 200}
+  access: {python_name: tickets, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 113004}
+renamed: true

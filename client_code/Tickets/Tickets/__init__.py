@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 
 from ._anvil_designer import TicketsTemplate
 from anvil import *
+import plotly.graph_objects as go
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -31,6 +32,16 @@ class Tickets(TicketsTemplate):
     anvil.server.call('add_ticket', ticket_dict)
     self.refresh_tickets()
     
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    flg = self.visible_card.visible
+    if flg:
+      self.visible_card.visible = False
+    else :
+      self.visible_card.visible = True
+    pass
+
 
 
 

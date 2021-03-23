@@ -44,7 +44,7 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''sendername'']'}
   - type: Label
-    properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+    properties: {role: text, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: 'fa:clock-o'}

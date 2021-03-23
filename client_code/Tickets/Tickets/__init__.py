@@ -33,16 +33,5 @@ class Tickets(TicketsTemplate):
     self.refresh_tickets()
     
 
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    flg = self.visible_card.visible
-    if flg:
-      self.visible_card.visible = False
-    else :
-      self.visible_card.visible = True
-    pass
-
-
-
 
 

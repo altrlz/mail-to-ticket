@@ -10,9 +10,9 @@ metadata: {}
 startup_form: Main
 native_deps: {head_html: ''}
 db_schema:
-- name: Tickets
+- name: Comments
   id: 113004
-  python_name: tickets
+  python_name: comments
   columns:
     KBsiDLVdI8g=:
       name: sendername
@@ -22,6 +22,10 @@ db_schema:
       name: receivedtime
       type: datetime
       admin_ui: {order: 3, width: 200}
+    ZOdYv+AmEV8=:
+      name: parent_id
+      type: string
+      admin_ui: {order: 6, width: 200}
     bY79M4McmRQ=:
       name: body
       type: string
@@ -38,6 +42,40 @@ db_schema:
       name: created
       type: datetime
       admin_ui: {order: 5, width: 200}
-  access: {python_name: tickets, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
+  access: {python_name: comments, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
     table_mapping_name: null, table_mapping_id: null, table_id: 113004}
+- name: Tickets
+  id: 113511
+  python_name: tickets
+  columns:
+    30aFXYzDZkI=:
+      name: receivedtime
+      type: datetime
+      admin_ui: {order: 5, width: 200}
+    4zvgE0nAq7w=:
+      name: subject
+      type: string
+      admin_ui: {order: 0, width: 200}
+    JXVShxjsYhg=:
+      name: senderEmailAddress
+      type: string
+      admin_ui: {order: 3, width: 200}
+    RkDD35OqyjQ=:
+      name: body
+      type: string
+      admin_ui: {order: 4, width: 200}
+    SQ0MXgxIp9o=:
+      name: parent_id
+      type: string
+      admin_ui: {order: 1, width: 200}
+    kZmSQfo4R2Y=:
+      name: sendername
+      type: string
+      admin_ui: {order: 2, width: 200}
+    wKQ++ge1U40=:
+      name: created
+      type: datetime
+      admin_ui: {order: 6, width: 200}
+  access: {python_name: tickets, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 113511}
 renamed: true

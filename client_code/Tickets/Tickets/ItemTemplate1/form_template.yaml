@@ -1,0 +1,101 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"SABXWB":10,"USBBAN":45,"VKBKBQ":25}',
+    spacing_below: small, background: ''}
+  name: card_1
+  layout_properties: {grid_position: 'KBMVTJ,DTAXXP', full_width_row: true}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"EFXZMZ":70,"GHRMYY":15}',
+      spacing_below: medium, background: ''}
+    name: card_2
+    layout_properties: {grid_position: 'UKAQDM,OYUOGZ', row_background: '', full_width_row: false}
+    components:
+    - type: Label
+      properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Subject:', font_size: null, font: '', spacing_above: none,
+        icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
+        underline: false, icon: 'fa:envelope-o'}
+      name: subject_label
+      layout_properties: {grid_position: 'JVOKEG,GHRMYY', row_background: '', full_width_row: false}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: none, icon_align: left,
+        spacing_below: none, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: subject_data
+      layout_properties: {grid_position: 'JVOKEG,EFXZMZ', row_background: '', full_width_row: false}
+      data_bindings:
+      - {property: text, code: 'self.item[''subject'']'}
+  - type: Label
+    properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'From:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: from_label
+    layout_properties: {grid_position: 'SKPOIZ,SABXWB'}
+  - type: Label
+    properties: {}
+    name: from_data
+    layout_properties: {grid_position: 'SKPOIZ,USBBAN'}
+    data_bindings:
+    - {property: text, code: 'self.item[''sendername'']'}
+  - type: Label
+    properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: 'fa:clock-o'}
+    name: receivedtime_data
+    layout_properties: {grid_position: 'SKPOIZ,VKBKBQ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''receivedtime'']'}
+  - type: Button
+    properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: detail, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:commenting'}
+    name: detail_button
+    layout_properties: {grid_position: 'ZOMZVO,LXMDZU'}
+    event_bindings: {click: detail_button_click}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: false, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: body_data
+    layout_properties: {grid_position: 'OOQEJZ,ITYXWC'}
+    data_bindings:
+    - {property: text, code: 'self.item[''body'']'}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: comment_area_card
+  layout_properties: {grid_position: 'KBMVTJ,PIEKFE', full_width_row: true}
+  components:
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: 'fa:comments-o'}
+    name: label_1
+    layout_properties: {grid_position: 'OIOVNY,MSAGUE'}
+  - type: RepeatingPanel
+    properties: {item_template: Tickets.Tickets.ItemTemplate1.ItemTemplate2}
+    name: repeating_panel_1
+    layout_properties: {grid_position: 'PIXLXG,DHSYSN'}
+  - type: Button
+    properties: {role: raised, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: close, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:angle-double-up'}
+    name: close_button
+    layout_properties: {grid_position: 'ASOZRS,KYTVNI', full_width_row: false, row_background: ''}
+    event_bindings: {click: close_button_click}
+is_package: true
+item_type: {table_id: 113004}

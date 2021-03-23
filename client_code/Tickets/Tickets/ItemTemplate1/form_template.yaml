@@ -1,0 +1,62 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{"SABXWB":10,"USBBAN":50,"VKBKBQ":20}'}
+  name: card_1
+  layout_properties: {grid_position: 'KBMVTJ,DTAXXP'}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"EFXZMZ":75,"GHRMYY":10}',
+      spacing_below: medium, background: ''}
+    name: card_2
+    layout_properties: {grid_position: 'UKAQDM,OYUOGZ', row_background: '', full_width_row: false}
+    components:
+    - type: Label
+      properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Subject:', font_size: null, font: '', spacing_above: none,
+        icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: subject_label
+      layout_properties: {grid_position: 'JVOKEG,GHRMYY', row_background: ''}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: none, icon_align: left,
+        spacing_below: none, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: subject_data
+      layout_properties: {grid_position: 'JVOKEG,EFXZMZ', row_background: ''}
+      data_bindings:
+      - {property: text, code: 'self.item[''subject'']'}
+  - type: Label
+    properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'From:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: from_label
+    layout_properties: {grid_position: 'SKPOIZ,SABXWB'}
+  - type: Label
+    properties: {}
+    name: from_data
+    layout_properties: {grid_position: 'SKPOIZ,USBBAN'}
+    data_bindings:
+    - {property: text, code: 'self.item[''sendername'']'}
+  - type: Label
+    properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: 'fa:clock-o'}
+    name: receivedtime_data
+    layout_properties: {grid_position: 'SKPOIZ,VKBKBQ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''receivedtime'']'}
+  - type: Label
+    properties: {}
+    name: body_data
+    layout_properties: {grid_position: 'OOQEJZ,ITYXWC'}
+    data_bindings:
+    - {property: text, code: 'self.item[''body'']'}
+is_package: true
+item_type: {table_id: 113004}

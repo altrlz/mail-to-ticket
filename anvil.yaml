@@ -40,4 +40,14 @@ db_schema:
       admin_ui: {order: 5, width: 200}
   access: {python_name: tickets, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
     table_mapping_name: null, table_mapping_id: null, table_id: 113004}
+- name: Subjects
+  id: 113511
+  python_name: subjects
+  columns:
+    4zvgE0nAq7w=:
+      name: Title
+      type: string
+      admin_ui: {order: 0, width: 200}
+  access: {python_name: subjects, app_id: QJIOAT2E43EX7GU7, server: full, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 113511}
 renamed: true

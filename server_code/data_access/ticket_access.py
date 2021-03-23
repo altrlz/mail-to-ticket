@@ -27,5 +27,7 @@ def add_ticket(ticket_dict):
 
 @anvil.server.callable
 def get_tickets():
-  return app_tables.tickets.search()
-
+  #subject_list = app_tables.subjects.search()
+  #search_list = app_tables.tickets.search(subject=subject_list[1]['Title'])
+  search_list = app_tables.tickets.search()
+  return search_list

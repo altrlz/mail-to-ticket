@@ -34,3 +34,9 @@ def get_tickets():
 def get_comments(subject_data):
   search_list = app_tables.comments.search(subject=subject_data)
   return search_list
+
+
+@anvil.server.callable
+def delete_all_data():
+  app_tables.tickets.delete_all_rows()
+  app_tables.comments.delete_all_rows()

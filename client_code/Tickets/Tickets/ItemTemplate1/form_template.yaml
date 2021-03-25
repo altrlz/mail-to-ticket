@@ -54,7 +54,7 @@ components:
     name: receivedtime_data
     layout_properties: {grid_position: 'SKPOIZ,VKBKBQ'}
     data_bindings:
-    - {property: text, code: 'self.item[''receivedtime'']'}
+    - {property: text, code: 'self.item[''receivedtime''].strftime(''%Y-%m-%d %H:%M:%S'')'}
   - type: Button
     properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: detail, font_size: null, font: '', spacing_above: small,

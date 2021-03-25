@@ -11,3 +11,7 @@ class Config(ConfigTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+
+  def all_delete_button_click(self, **event_args):
+    anvil.server.call('delete_all_data')
+

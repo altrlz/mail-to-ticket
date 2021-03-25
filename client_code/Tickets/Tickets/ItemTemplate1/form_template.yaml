@@ -7,7 +7,8 @@ components:
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"SABXWB":10,"USBBAN":45,"VKBKBQ":25}',
     spacing_below: small, background: ''}
   name: card_1
-  layout_properties: {grid_position: 'KBMVTJ,DTAXXP', full_width_row: true}
+  layout_properties: {grid_position: 'KBMVTJ,DTAXXP', full_width_row: true, row_background: 'theme:Secondary
+      500'}
   components:
   - type: ColumnPanel
     properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
@@ -76,7 +77,8 @@ components:
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: ''}
   name: comment_area_card
-  layout_properties: {grid_position: 'KBMVTJ,PIEKFE', full_width_row: true}
+  layout_properties: {grid_position: 'KBMVTJ,PIEKFE', full_width_row: true, row_background: 'theme:Secondary
+      500'}
   components:
   - type: Label
     properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
